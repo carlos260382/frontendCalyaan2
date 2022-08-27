@@ -6,7 +6,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom";
 
 import styles from "../style/OrderScreenTurn.module.css";
-import Swal from "sweetalert2";
+// import Swal from "sweetalert2";
 
 import {
   TURN_CREATE_SUCCESS,
@@ -74,7 +74,7 @@ export default function TurnScreen(props) {
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!turn.hour || !turn.day) {
-      Swal.fire("debe seleccionar un dia y una hora");
+      alert("debe seleccionar un dia y una hora");
     }
 
     try {
@@ -93,7 +93,7 @@ export default function TurnScreen(props) {
       dispatch({ type: TURN_CREATE_SUCCESS, payload: data.turn });
 
       if (data) {
-        Swal.fire(
+        alert(
           "Turno creado con exito, recibira una notificación cuando el profesional tome el servicio"
         );
         history.push(`/order/${props.order._id}`);
