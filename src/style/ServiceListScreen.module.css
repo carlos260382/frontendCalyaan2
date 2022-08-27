@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+.container {
+	display: flex;
+	flex-direction: row;
+	column-gap: 3vw;
+	flex-wrap: wrap;
+	width: 100vw;
+	height: auto;
+	margin-bottom: 3vw;
+	margin-top: 4em;
+}
+
+.container h1 {
+	color: #494949;
+	font-family: 'Josefin Sans';
+	font-size: 1.5em;
+	margin-right: 2vw;
+}
+
+.container th,
+td,
+p {
+	color: #494949;
+	font-family: 'Josefin Sans';
+	font-size: 1vw;
+}
+
+.btn {
+	background-color: #eda598;
+	color: white;
+	border: none;
+	border-radius: 1em;
+	padding: 0.5em;
+	font-size: 1em;
+	font-family: 'Josefin Sans';
+	cursor: pointer;
+	width: 5em;
+	transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+	background-color: #494949;
+}
+
+.btn:focus {
+	background-color: #494949;
+}
+
+.btn:active {
+	background-color: #494949;
+}
+
+.btn:disabled {
+	background-color: #494949;
+}
+
+.btn:disabled:hover {
+	background-color: #494949;
+}
+
+.btnadd {
+	background-color: #eda598;
+	color: white;
+	border: none;
+	border-radius: 1em;
+	padding: 0.5em;
+	font-size: 1em;
+	font-family: 'Josefin Sans';
+	cursor: pointer;
+	width: 10em;
+	transition: all 0.3s ease-in-out;
+}
+
+.container button:hover {
+	background-color: #494949;
+}
+
+.container button:focus {
+	background-color: #494949;
+}
+
+.container button:active {
+	background-color: #494949;
+}
+
+.container button:disabled {
+	background-color: #494949;
+}
+
+.container button:disabled:hover {
+	background-color: #494949;
+}
+
+@media (max-width: 767.98px) {
+	.btn {
+		width: 5vw;
+		font-size: 0.5vw;
+	}
+	.container {
+		margin-top: 3em;
+	}
+}
+
+@media (max-width: 575.98px) {
+	.container {
+		margin-top: 4em;
+	}
+
+	.btnadd {
+		padding: 0.5em;
+		font-size: 1em;
+		width: 9em;
+	
+	}
+}

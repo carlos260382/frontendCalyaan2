@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "http://localhost:3000/static/css/main.35fa0713.css",
+    "main.js": "http://localhost:3000/static/js/main.9072f1e4.js",
+    "static/media/catPeluqueria.png": "http://localhost:3000/static/media/catPeluqueria.1ac4483b8b6115ea5ba6.png",
+    "static/media/catMasaje.png": "http://localhost:3000/static/media/catMasaje.d7f68bd61b9973a67f7a.png",
+    "static/media/catMaquillaje.png": "http://localhost:3000/static/media/catMaquillaje.31be06eccfccc243987e.png",
+    "static/media/catUñas.png": "http://localhost:3000/static/media/catUñas.3adb6051927d81b25903.png",
+    "static/media/catDepilacion.png": "http://localhost:3000/static/media/catDepilacion.692c989dfc602c3ee191.png",
+    "static/media/logo.png": "http://localhost:3000/static/media/logo.7391fed19edfcfb85f3d.png",
+    "service-worker.js": "http://localhost:3000/service-worker.js",
+    "static/media/catYoga.jpg": "http://localhost:3000/static/media/catYoga.f68a32677703b5a0a625.jpg",
+    "static/media/catSpa.jpg": "http://localhost:3000/static/media/catSpa.ec9b74265a5d541f8be0.jpg",
+    "static/media/correo.png": "http://localhost:3000/static/media/correo.20e397db8f78f0f9e19a.png",
+    "static/media/whatsApp1.png": "http://localhost:3000/static/media/whatsApp1.9cb48ba15cc8f2cfb031.png",
+    "static/media/cart1.svg": "http://localhost:3000/static/media/cart1.c428ae068f43c68e2c8899eb31b648f4.svg",
+    "static/media/cart2.svg": "http://localhost:3000/static/media/cart2.3cc464b9f97f56b1e23ebbfff2303d04.svg",
+    "index.html": "http://localhost:3000/index.html",
+    "main.35fa0713.css.map": "http://localhost:3000/static/css/main.35fa0713.css.map",
+    "main.9072f1e4.js.map": "http://localhost:3000/static/js/main.9072f1e4.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.35fa0713.css",
+    "static/js/main.9072f1e4.js"
+  ]
+}

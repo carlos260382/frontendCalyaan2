@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+
+.container {
+	width: 100vw;
+	margin-top: 5vw;
+}
+
+/* .container h1{
+  font-size: 1em;
+} */
+
+
+.container h1,
+label {
+	color: #494949;
+	font-family: 'Josefin Sans';
+	font-size: 1.5em;
+}
+
+.inicio h1{
+	color: #494949;
+	font-family: 'Josefin Sans';
+}
+.register {
+	color: #494949;
+	font-family: 'Josefin Sans';
+	font-size: 1.5em;
+	margin-bottom: 1em;
+}
+
+.container button {
+	background-color: #eda598;
+	color: white;
+	border: none;
+	border-radius: 1em;
+	padding: 0.6em;
+	font-size: 1.5em;
+	font-family: 'Josefin Sans';
+	cursor: pointer;
+	width: 70%;
+	margin-left: 15%;
+	transition: all 0.3s ease-in-out;
+}
+
+.container button:hover {
+	background-color: #494949;
+}
+
+.container button:focus {
+	background-color: #494949;
+}
+
+.container button:active {
+	background-color: #494949;
+}
+
+.container button:disabled {
+	background-color: #494949;
+}
+
+.container button:disabled:hover {
+	background-color: #494949;
+}
+
+
+@media (max-width: 575.98px) {
+	.inicio h1{
+		font-size: 2em;
+	}
+ }

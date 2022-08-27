@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+
+.container {
+	display: flex;
+	flex-direction: row;
+    justify-content: center;
+	column-gap: 1vw;
+	flex-wrap: wrap;
+	width: 100vw;
+	height: auto;
+	margin-bottom: 3vw;
+	margin-top: 2em;
+}
+
+.container h1,
+label {
+	color: #494949;
+	font-family: 'Josefin Sans';
+	font-size: 2.5rem;
+}
+
+.container div{
+    margin: 1.5em;
+}
+.container button {
+	background-color: #eda598;
+	color: white;
+	border: none;
+	border-radius: 1em;
+	padding: 1em;
+	font-size: 2em;
+	font-family: 'Josefin Sans';
+	cursor: pointer;
+	width: 70%;
+	margin-left: 15%;
+	transition: all 0.3s ease-in-out;
+}
+
+.container button:hover {
+	background-color: #494949;
+}
+
+.container button:focus {
+	background-color: #494949;
+}
+
+.container button:active {
+	background-color: #494949;
+}
+
+.container button:disabled {
+	background-color: #494949;
+}
+
+.container button:disabled:hover {
+	background-color: #494949;
+}
+
+@media (max-width: 767.98px) {
+	.container {
+		margin-top: 2em;
+	}
+}
+
+@media (max-width: 575.98px) {
+	.container {
+		margin-top: 1em;
+	}
+    .container button {
+        font-size: 2em;
+}}
+
