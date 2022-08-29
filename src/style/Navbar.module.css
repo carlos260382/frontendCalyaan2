@@ -315,6 +315,7 @@ color: #ffffff;
 @media (max-width: 575.98px) {
 
 	.container{
+		margin-top: 8px;
 		justify-content:space-between;
 		height: 20vw;
 		column-gap: 1.5vw;
