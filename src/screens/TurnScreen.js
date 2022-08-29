@@ -6,7 +6,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom";
 
 import styles from "../style/OrderScreenTurn.module.css";
-// import Swal from "sweetalert2";
+import Swal from "sweetalert2";
 
 import {
   TURN_CREATE_SUCCESS,
@@ -32,11 +32,42 @@ export default function TurnScreen(props) {
   console.log("informacion de usuario", userInfo);
   const [turn, setTurn] = useState({});
 
-  useEffect(() => {
+  // useEffect(() => {
+  //   setTurn({
+  //     seller: props.order.seller,
+  //     day: "",
+  //     hour: "",
+  //     status: false,
+  //     user: props.order.user,
+  //     orderId: props.order._id,
+  //     fullName: props.order.shippingAddress.fullName,
+  //     emailUser: userInfo.email,
+  //     phoneUser: userInfo.phone,
+  //     address: props.order.shippingAddress.address,
+  //     city: props.order.shippingAddress.city,
+  //     postalCode: props.order.shippingAddress.postalCode,
+  //     country: props.order.shippingAddress.country,
+  //     service,
+  //   });
+  // }, [
+  //   props.order.seller,
+  //   props.order.user,
+  //   props.order._id,
+  //   props.order.shippingAddress.fullName,
+  //   userInfo.email,
+  //   userInfo.phone,
+  //   props.order.shippingAddress.address,
+  //   props.order.shippingAddress.city,
+  //   props.order.shippingAddress.postalCode,
+  //   props.order.shippingAddress.country,
+  //   service,
+  // ]);
+
+  const handleChange = (e) => {
     setTurn({
+      ...turn,
+      [e.target.name]: e.target.value,
       seller: props.order.seller,
-      day: "",
-      hour: "",
       status: false,
       user: props.order.user,
       orderId: props.order._id,
@@ -49,32 +80,30 @@ export default function TurnScreen(props) {
       country: props.order.shippingAddress.country,
       service,
     });
-  }, [
-    props.order.seller,
-    props.order.user,
-    props.order._id,
-    props.order.shippingAddress.fullName,
-    userInfo.email,
-    userInfo.phone,
-    props.order.shippingAddress.address,
-    props.order.shippingAddress.city,
-    props.order.shippingAddress.postalCode,
-    props.order.shippingAddress.country,
-    service,
-  ]);
-
-  const handleChange = (e) => {
-    setTurn({
-      ...turn,
-      [e.target.name]: e.target.value,
-    });
     console.log("este es el turno", turn);
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    // setTurn({
+    //   ...turn,
+    //   seller: props.order.seller,
+    //   status: false,
+    //   user: props.order.user,
+    //   orderId: props.order._id,
+    //   fullName: props.order.shippingAddress.fullName,
+    //   emailUser: userInfo.email,
+    //   phoneUser: userInfo.phone,
+    //   address: props.order.shippingAddress.address,
+    //   city: props.order.shippingAddress.city,
+    //   postalCode: props.order.shippingAddress.postalCode,
+    //   country: props.order.shippingAddress.country,
+    //   service,
+    // });
+
     if (!turn.hour || !turn.day) {
-      alert("debe seleccionar un dia y una hora");
+      Swal.fire("debe seleccionar un dia y una hora");
     }
 
     try {
@@ -93,7 +122,7 @@ export default function TurnScreen(props) {
       dispatch({ type: TURN_CREATE_SUCCESS, payload: data.turn });
 
       if (data) {
-        alert(
+        Swal.fire(
           "Turno creado con exito, recibira una notificación cuando el profesional tome el servicio"
         );
         history.push(`/order/${props.order._id}`);
