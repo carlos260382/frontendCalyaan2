@@ -20,13 +20,18 @@ flex-direction: column;
 justify-content: center;
 align-items: flex-start;
 color: #494949;
-font-family: 'Josefin Sans';
-font-size: 1em;
 margin: 5px;
+}
+
+.contenSearch span{
+	font-family: 'Josefin Sans';
+	color:#494949;
+	font-size: 1em;
 }
 
 .container h1{
 	font-size: 3em;
+	font-weight: 300;
 }
 
 .container1{
@@ -49,15 +54,13 @@ margin: 5px;
 
 .card {
 	margin: 0.5em 0.5em 0.5em 0.5em;
-	background-color: #eda59829;
 	transition: 0.5s;
 	cursor: pointer;
-	border: solid #eda598 3px;
-	border-radius: 10px;
+	border-radius: 12px;
 	width: 90%;
 	height: auto;
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
 	align-content: center;
 	justify-content:flex-start;
 	align-items: center;
@@ -114,9 +117,10 @@ margin: 5px;
 }
 
 .img{
-	width: 35%;
-	height: 35%;
+	width: 80%;
+	height: 200px;
 	margin:1em;
+	border-radius: 10px;
 }
 
 .textCard{
@@ -126,20 +130,41 @@ margin: 5px;
 	align-content: center;
 	align-items: center;
 	width: 100%;
-	row-gap: 1vw;
+	row-gap: 1em;
+	margin-bottom: 1em;
 	
 }
 
-.textCard h2{
-font-size: 2.5em;
-height: 30%;
-margin: 0;
-padding: 0;
+.textCard h3{
+	color:#4F4F4F;
+	font-size: 1.5em;
+	font-family: 'Josefin Sans';
+	font-weight: 500;
+	margin: 0;
+	padding: 0;
 }
 
-.entrarPng{
-	width: 4vw;
-	height: 4vw;
+.btn {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	padding: 1px 4px;
+	color:#ffffff;
+	font-family: 'Josefin Sans';
+	font-weight: 500;
+	font-size: 1.5em;
+	width: 90%;
+	height: 46px;
+	background: #EDA598;
+	border-radius: 10px;
+	border: none;
+}
+
+.btn:hover {
+	background-color: #494949;
+	color: #ffffff;
+	cursor: pointer;
 }
 
 /* pasos */
@@ -211,34 +236,22 @@ align-content: center;
 }
 
 @media (max-width: 768px) {
+	.img{
+		
+		height: 130px;
 
-
-.entrarPng{
-	width: 5vw;
-	height: 5vw;
-}
-	.textCard h2{
-		margin: 0.2em;
-		}
-
-	.textCard span{
-		width: 40%;
-		margin: 0.2em;
-	font-size: 1em;	}
-
-	.steps > div {
-		width: 20%;
-		margin-bottom: 1em;
-		font-size: 0.7em;
-	}
-	.steps2{
-		margin-top: 0%;
 	}
 }
 @media (max-width: 575.98px) {
-	.container1{
-		flex-direction: row;
-	margin: 0 0 0 0 ;
+
+	.contenSearch span{
+		font-size: 1.5em;
+	}
+
+	.img{
+		
+		height: 180px;
+
 	}
 	.container h1{
 		font-size: 2.5em;
@@ -247,7 +260,7 @@ align-content: center;
 	}
 
 	.li{
-		width: 45%;
+		width: 90%;
 
 	}
 

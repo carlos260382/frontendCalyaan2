@@ -18,7 +18,6 @@ import catPeluqueria from "../assent/catPeluqueria.png";
 import catUñas from "../assent/catUñas.png";
 import catSpa from "../assent/catSpa.jpg";
 import catYoga from "../assent/catYoga.jpg";
-import entrarPng from "../assent/entrar.png";
 
 export default function Landing() {
   const serviceCategoryList = useSelector((state) => state.serviceCategoryList);
@@ -69,7 +68,7 @@ export default function Landing() {
           ></Route>
         </div>
       </div>
-      <h1>Servicios</h1>
+      <h1>Nuestros Servicios</h1>
       {/* {userInfo ? <h2>Puntos Acumulados {userInfo.pointsUser} </h2> : ''} */}
       <div className={styles.container1}>
         {loadingCategories ? (
@@ -85,10 +84,14 @@ export default function Landing() {
               >
                 <img src={c.image} alt="" className={styles.img} />
                 <div className={styles.textCard}>
-                  <h2>{c.name}</h2>
-                  <div className={styles.textIcon}>
-                    <img src={entrarPng} alt="" className={styles.entrarPng} />
-                  </div>
+                  <h3>{c.name}</h3>
+
+                  <button
+                    to={`/search/category/${c.name}`}
+                    className={styles.btn}
+                  >
+                    Ver mas
+                  </button>
                 </div>
               </NavLink>
             </li>
