@@ -13,7 +13,16 @@
 }
 
 .contenSearch{
-display: none;
+width: 80vw;
+height: 84px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+color: #494949;
+font-family: 'Josefin Sans';
+font-size: 1em;
+margin: 5px;
 }
 
 .container h1{
@@ -202,12 +211,7 @@ align-content: center;
 }
 
 @media (max-width: 768px) {
-.contenSearch{
-	display:flex;
-	justify-content: flex-end;
-	margin-top: 1em;
-	width: 100vw;
-}
+
 
 .entrarPng{
 	width: 5vw;

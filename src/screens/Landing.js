@@ -20,8 +20,6 @@ import catSpa from "../assent/catSpa.jpg";
 import catYoga from "../assent/catYoga.jpg";
 import entrarPng from "../assent/entrar.png";
 
-// import service1 from '../assent/services1.jpg';
-
 export default function Landing() {
   const serviceCategoryList = useSelector((state) => state.serviceCategoryList);
   const {
@@ -45,31 +43,7 @@ export default function Landing() {
     Yoga: catYoga,
   };
 
-  //   let newArray = [];
-
-  //   for (let i = 0; i < categories?.length; i++) {
-  //     return (newArray = newArray.concat({
-  //       name: categories[i],
-  //       image: images[i],
-  //     }));
-  //   }
-
-  // console.log("nuevoArray", newArray);
-
   let categoriesImage;
-
-  //   const categoryImage = () => {
-  //     if (categories) {
-  //       for (let i = 0; i < categories.length; i++) {
-  //         categoriesImage = {
-  //           name: categories[i],
-  //           image: images[categories[i]],
-  //         };
-  //       }
-  //     }
-  //     return categoriesImage;
-  //   };
-
   const categoryImage = async () => {
     if (categories) {
       categoriesImage = categories?.map((c) => ({
@@ -88,6 +62,7 @@ export default function Landing() {
   return (
     <div className={styles.container}>
       <div className={styles.contenSearch}>
+        <span>Encuentra el servicio que estas necesitando</span>
         <div>
           <Route
             render={({ history }) => <SearchBox history={history}></SearchBox>}
