@@ -174,73 +174,47 @@ margin: 5px;
 	height: auto;
 	display: flex;
 	flex-direction: row;
-	justify-content: center;
-	align-items: center;
+	justify-content: flex-start;
+	align-items: flex-start;
 	flex-wrap: wrap;
 	margin-bottom: 2em;
 }
 
-.steps1 {
-display: flex;
-flex-direction: row;
-justify-content: center;
-align-items: center;
-align-content: center;
-    width: 20%;
-    height: 10px;
-}
-
-.steps2{
-	border: solid 1px #494949;
-	border-radius: 10px;
-	background-color: #494949;
+.steps1{
 	display: flex;
-flex-direction: row;
-justify-content: center;
-align-items: center;
-align-content: center;
-    width: 20%;
-    height: 60px;
-	
-}
-
-.steps2 span{
-	font-weight: 500;
-	color:#ffffff;
-	font-size: 1.4em;
-}
-
-.text{
- 	display: block;
- 	border: 1px solid #494949;
-    background-color: #494949;
-    color: #ffffff;
-	font-weight: 500;
-	font-size: 1.2em;
-	text-align: center;
-	align-items: center;
+	flex-direction: column;
 	justify-content: center;
- 	padding: 2rem;
- 	margin-top: 0;
- 	width: 56%;
-	height: 10px;
+	align-items: center;
+	margin: 0 0 0 0 ;
+	flex: 1;
+	gap:10px
 }
-.arrow {
-	width: 0;
-    height: 0;
-    border-top: 30px solid transparent;
-    border-bottom: 30px solid transparent;
-    border-left: 30px solid #494949;
-    right: 175px;
-    top: -15px;
+
+.steps h3{
+	font-family: 'Josefin Sans';
+	font-weight: 600;
+	font-size: 1.5em;
+	color:#494949;
+	margin: 0 0 0 0 ;
+}
+
+.steps span{
+	font-family: 'Josefin Sans';
+	font-weight: 500;
+	font-size: 1em;
+	color:#494949;
+	margin: 0 0 0 0 ;
+	text-align: center;
 }
 
 @media (max-width: 768px) {
 	.img{
-		
 		height: 130px;
-
 	}
+	.steps h3{
+		font-size: 1em;
+	}
+
 }
 @media (max-width: 575.98px) {
 
@@ -277,49 +251,23 @@ align-content: center;
 	padding: 0;
 	}
 
-.entrarPng{
-	width: 5vw;
-	height: 5vw;
-}
-
-	.steps > div {
-		width: 21%;
-		margin-bottom: 0.5em;
-		font-size: 0.5em;
+	.steps{
+		width: 100vw;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: center;
 	}
-
 	
-.steps1 {
-		width: 15%;
-		height: 15%;
-		margin: 0.7em;
+	.steps1{
+		display: flex;
+		flex-direction: column;
+		width: 60vw;
+		margin-bottom: 20px ;
+	
 	}
-
-
-	.text{
-		
-	   text-align: justify;
-	   align-items: center;
-	   align-content: center;
-	   justify-content: center;
-		padding: 0.4rem;
-		margin-top: 0;
-		width: 50%;
-	   height: 10px;
-   }
-   .steps2{
-height: 20px;
-text-align: justify;
-}
-.steps2 span{
-	font-weight: 500;
-	color:#ffffff;
-
-}
-.arrow {
-    border-top: 10px solid transparent;
-    border-bottom: 10px solid transparent;
-    border-left: 10px solid #494949;
-
-}
+	.steps h3{
+		font-weight: 600;
+		font-size: 2em;
+	text-align: center;
+	}
 }

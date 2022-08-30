@@ -18,6 +18,10 @@ import catPeluqueria from "../assent/catPeluqueria.png";
 import catUñas from "../assent/catUñas.png";
 import catSpa from "../assent/catSpa.jpg";
 import catYoga from "../assent/catYoga.jpg";
+import cart3 from "../assent/cart3.svg";
+import agenda from "../assent/agenda.svg";
+import card from "../assent/card.svg";
+import home from "../assent/home.svg";
 
 export default function Landing() {
   const serviceCategoryList = useSelector((state) => state.serviceCategoryList);
@@ -103,23 +107,33 @@ export default function Landing() {
 
       <div className={styles.steps}>
         <div className={styles.steps1}>
-          {" "}
-          <span className={styles.text}>Escoge el servicio</span>
-          <span className={styles.arrow}></span>
+          <img src={cart3} alt="" className={styles.cart3} />
+          <h3 className={styles.text}>Escoge tu servicio</h3>
+          <span className={styles.text}>
+            Escoge el servicio que deseas, entre varias categorias
+          </span>
         </div>
         <div className={styles.steps1}>
-          {" "}
-          <span className={styles.text}>Agenda tu turno</span>
-          <span className={styles.arrow}></span>
+          <img src={agenda} alt="" className={styles.cart3} />
+          <h3 className={styles.text}>Agenda tu turno</h3>
+          <span className={styles.text}>
+            Gestionarás tu turno en muy simples pasos.
+          </span>
         </div>
         <div className={styles.steps1}>
-          {" "}
-          <span className={styles.text}>Realiza el pago</span>
-          <span className={styles.arrow}></span>
+          <img src={card} alt="" className={styles.cart3} />
+          <h3 className={styles.text}>Realiza el pago</h3>
+          <span className={styles.text}>
+            Podrás realizar tu pago una vez que el profesional tome el servicio.
+            De esta forma asegurás el turno.
+          </span>
         </div>
-        <div className={styles.steps2}>
-          {" "}
-          <span>Disfruta tu servicio en casa</span>
+        <div className={styles.steps1}>
+          <img src={home} alt="" className={styles.cart3} />
+          <h3 className={styles.text}>Disfruta tu servicio en casa</h3>
+          <span>
+            Recibirás el servicio en la comodidad y tranquilidad de tu hogar.
+          </span>
         </div>
       </div>
     </div>
