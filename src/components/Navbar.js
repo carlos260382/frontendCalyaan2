@@ -1,7 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable no-unused-vars */
-import SearchBox from "./SearchBox";
-import { NavLink, Route } from "react-router-dom";
+// import SearchBox from "./SearchBox";
+import { NavLink } from "react-router-dom";
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { signout } from "../actions/userActions";
@@ -10,11 +10,11 @@ import LoadingBox from "./LoadingBox";
 import MessageBox from "./MessageBox";
 import styles from "../style/Navbar.module.css";
 import logo from "../assent/logo.png";
-import logoWhite from "../assent/LOGO34.png";
+// import logoWhite from "../assent/LOGO34.png";
 import carrito from "../assent/cart2.svg";
-import carritoBlanco from "../assent/cart1.svg";
+// import carritoBlanco from "../assent/cart1.svg";
 import Asider from "./Asider";
-import { subscriptionUser } from "../actions/userActions.js";
+// import { subscriptionUser } from "../actions/userActions.js";
 
 function Navbar() {
   const cart = useSelector((state) => state.cart);
@@ -269,7 +269,7 @@ function Navbar() {
             ""
           )}
         </div>
-        <div className={styles.contenSearch}>
+        {/* <div className={styles.contenSearch}>
           <div>
             <Route
               render={({ history }) => (
@@ -277,7 +277,7 @@ function Navbar() {
               )}
             ></Route>
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );
