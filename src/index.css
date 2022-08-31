@@ -234,11 +234,14 @@ img.large {
 }
 /* Rating */
 .rating span {
-	color: #d6f040;
-	margin: 0.1rem;
+	color: #e9f907;
+	margin: 0.5rem;
+	font-size: 2em;
+	font-family: 'Josefin Sans';
 }
 .rating span:last-child {
-	color: #404040;
+	color: #494949;
+	font-size: 2em;
 }
 /* Alert */
 .loading {

@@ -60,7 +60,6 @@ function App(config) {
     const vapidKeys = {
       publicKey:
         "BEvzM53UuYf7sR55AmLYtzpx6XgX6Y3AhzywNfAU-OfXZKh5otnrIQSjmUSjOG2dXf6U6iv6V5VDL6_X55Hx-10",
-      privateKey: "7y4-pgCSiEDX1noQFnnnh82oBRFM_Qh5G9hLH28mQtc",
     };
 
     function register() {
