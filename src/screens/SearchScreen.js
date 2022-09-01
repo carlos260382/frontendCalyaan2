@@ -18,6 +18,7 @@ export default function SearchScreen(props) {
     order: "newest",
     rating: 0,
   });
+
   const {
     name = "all",
     category = "all",
@@ -110,66 +111,36 @@ export default function SearchScreen(props) {
       <div className={styles.container2}>
         <div className={styles.col1}>
           <h3>Buscar por categoria</h3>
-          <div>
+
+          <div className={styles.category}>
             {loadingCategories ? (
               <LoadingBox></LoadingBox>
             ) : errorCategories ? (
               <MessageBox variant="danger">{errorCategories}</MessageBox>
             ) : (
-              <ul>
-                <li>
-                  <Link
-                    className={category === "all" ? "active" : ""}
-                    to={getAllUrl({ category: "all" })}
-                  >
-                    Todas
-                  </Link>
-                </li>
-                {categories.map((c) => (
-                  <li key={c}>
-                    <Link
-                      className={c === category ? "active" : ""}
-                      to={getFilterUrl({ category: c })}
-                    >
-                      {c}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
+              <div>
+                <Link
+                  className={category === "all" ? "active" : ""}
+                  to={getAllUrl({ category: "all" })}
+                >
+                  <h3>Seleccionar todo</h3>
+                </Link>
+
+                <ul>
+                  {categories.map((c) => (
+                    <li key={c}>
+                      <Link
+                        className={c === category ? "active" : ""}
+                        to={getFilterUrl({ category: c })}
+                      >
+                        {c}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             )}
           </div>
-          {/* <div>
-            <h3>Precio</h3>
-            <ul>
-              {prices.map((p) => (
-                <li key={p.name}>
-                  <Link
-                    to={getFilterUrl({ min: p.min, max: p.max })}
-                    className={
-                      `${p.min}-${p.max}` === `${min}-${max}` ? 'active' : ''
-                    }
-                  >
-                    {p.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div> */}
-          {/* <div>
-            <h3>Buscar por opinión</h3>
-            <ul>
-              {ratings.map((r) => (
-                <li key={r.name}>
-                  <Link
-                    to={getFilterUrl({ rating: r.rating })}
-                    className={`${r.rating}` === `${rating}` ? "active" : ""}
-                  >
-                    <Rating caption={" & up"} rating={r.rating}></Rating>
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div> */}
         </div>
         <div className={styles.col2}>
           {loading ? (
