@@ -1,19 +1,23 @@
 /* eslint-disable no-use-before-define */
 /* eslint-disable react/prop-types */
 // eslint-disable-next-line no-unused-vars
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Link, useParams, Route } from "react-router-dom";
-import SearchBox from "../components/SearchBox";
+import { Link, useParams } from "react-router-dom";
+// import SearchBox from "../components/SearchBox";
 import { listService } from "../actions/serviceActions";
 import LoadingBox from "../components/LoadingBox";
 import MessageBox from "../components/MessageBox";
 import Service from "../components/Service.js";
-// import Rating from "../components/Rating";
+//import Rating from "../components/Rating";
 import styles from "../style/SearchScreen.module.css";
-// import { ratings } from "../utils";
+import { ratings } from "../utils";
 
 export default function SearchScreen(props) {
+  const [filter, setFilter] = useState({
+    order: "newest",
+    rating: 0,
+  });
   const {
     name = "all",
     category = "all",
@@ -33,6 +37,7 @@ export default function SearchScreen(props) {
     error: errorCategories,
     categories,
   } = serviceCategoryList;
+
   useEffect(() => {
     dispatch(
       listService({
@@ -57,34 +62,49 @@ export default function SearchScreen(props) {
     const filterMax = filter.max ? filter.max : filter.max === 0 ? 0 : max;
     return `/search/category/${filterCategory}/name/${filterName}/min/${filterMin}/max/${filterMax}/rating/${filterRating}/order/${sortOrder}/pageNumber/${filterPage}`;
   };
+
+  const getAllUrl = (filter) => {
+    const filterCategory = filter.category || category;
+    return `/search/category/${filterCategory}/name/all/min/0/max/0/rating/0/order/newest/pageNumber/1`;
+  };
+
+  const getFilter = () => {
+    props.history.push(getFilterUrl(filter));
+  };
+  console.log("rating", ratings);
   return (
     <div className={styles.container}>
-      <div className={styles.container1}>
+      <div className={styles.containerSort}>
         <div>
-          <h3> Ordenar los servicios por </h3>
+          <label>Precio</label>
+
           <select
-            value={order}
+            name="precio"
+            placeholder="Seleccionar1"
             onChange={(e) => {
-              props.history.push(getFilterUrl({ order: e.target.value }));
+              setFilter({ order: e.target.value });
             }}
           >
-            <option value="newest">Llegadas mas recientes</option>
-            <option value="lowest"> Del precio mas bajo al mas alto</option>
-            <option value="highest">Del precio mas alto al mas bajo</option>
-            <option value="toprated">
-              Por Promedio de opiniones de clientes
-            </option>
+            <option>seleccionar</option>
+            <option value="lowest"> De menor a mayor</option>
+            <option value="highest">De mayor a menor</option>
           </select>
         </div>
-        <div className={styles.contenSearch}>
-          <div>
-            <Route
-              render={({ history }) => (
-                <SearchBox history={history}></SearchBox>
-              )}
-            ></Route>
-          </div>
+
+        <div>
+          <label>Experiencia</label>
+          <select
+            onChange={(e) => {
+              setFilter({ rating: e.target.value });
+            }}
+          >
+            <option value="0">seleccionar</option>
+            <option value="5">Calificados con 5 estrellas</option>
+            <option value="4">Calificados con 4 estrellas</option>
+            <option value="3">Calificados con 3 estrellas</option>
+          </select>
         </div>
+        <button onClick={getFilter}>Filtrar</button>
       </div>
 
       <div className={styles.container2}>
@@ -100,7 +120,7 @@ export default function SearchScreen(props) {
                 <li>
                   <Link
                     className={category === "all" ? "active" : ""}
-                    to={getFilterUrl({ category: "all" })}
+                    to={getAllUrl({ category: "all" })}
                   >
                     Todas
                   </Link>
@@ -151,7 +171,7 @@ export default function SearchScreen(props) {
             </ul>
           </div> */}
         </div>
-        <div>
+        <div className={styles.col2}>
           {loading ? (
             <LoadingBox></LoadingBox>
           ) : error ? (
