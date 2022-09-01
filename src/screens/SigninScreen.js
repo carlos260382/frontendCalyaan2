@@ -2,11 +2,12 @@
 // eslint-disable-next-line no-unused-vars
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { Link } from 'react-router-dom';
+import { Link,NavLink } from 'react-router-dom';
 import { signin } from '../actions/userActions';
 import LoadingBox from '../components/LoadingBox';
 import MessageBox from '../components/MessageBox';
 import styles from '../style/SigninScreen.module.css';
+import logo from '../assent/logo.png';
 
 export default function SigninScreen(props) {
 	const [email, setEmail] = useState('');
@@ -31,6 +32,13 @@ export default function SigninScreen(props) {
 	}, [props.history, redirect, userInfo]);
 	return (
 		<div className={styles.container}>
+			<div className={styles.logo}>
+					<NavLink to='/'>
+						
+							<img src={logo} alt='imagen principal' />
+						
+					</NavLink>
+				</div>
 			<form className='form' onSubmit={submitHandler}>
 				<div className={styles.inicio}>
 					<h1>Iniciar sesión</h1>
@@ -38,25 +46,34 @@ export default function SigninScreen(props) {
 				{loading && <LoadingBox></LoadingBox>}
 				{error && <MessageBox variant='danger'>{error}</MessageBox>}
 				<div>
-					<label htmlFor='email'>Correo Electronico</label>
+					<label htmlFor='email'>Email</label>
 					<input
 						type='email'
 						id='email'
-						placeholder='Enter email'
+						placeholder='Ingrese su email'
 						required
 						onChange={e => setEmail(e.target.value)}
 					></input>
 				</div>
-				<div>
+
+				<div className={styles.mail} >
 					<label htmlFor='password'>Contraseña</label>
-					<input
+					<input 
 						type='password'
 						id='password'
-						placeholder='Enter password'
+						placeholder='Ingrese su contraseña'
 						required
 						onChange={e => setPassword(e.target.value)}
 					></input>
 				</div>
+				
+				
+				<label>
+                Recordar contraseña: <br/>
+                <input type="checkbox" name="checkbox"/>
+            	</label>
+
+				
 				<div>
 					<label />
 					<button type='submit'>Iniciar sesión</button>
@@ -64,11 +81,12 @@ export default function SigninScreen(props) {
 				<div>
 					<label />
 					<div className={styles.register}>
-						Nuevo cliente? <Link to={'/register/01'}>Crea tu cuenta</Link>
-					</div>
 					<div className={styles.register}>
-						<Link to={`/recoverPassword`}>Recuperar Contraseña</Link>
+						<Link to={`/recoverPassword`}>¿Olvidaste tu contraseña?</Link>
+					</div><br/>
+						¿No tienes una cuenta?<br/> <Link to={'/register/01'}>Regístrate gratis.</Link>
 					</div>
+
 				</div>
 			</form>
 		</div>

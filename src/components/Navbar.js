@@ -10,7 +10,7 @@ import LoadingBox from "./LoadingBox";
 import MessageBox from "./MessageBox";
 import styles from "../style/Navbar.module.css";
 import logo from "../assent/logo.png";
-// import logoWhite from "../assent/LOGO34.png";
+
 import carrito from "../assent/cart2.svg";
 // import carritoBlanco from "../assent/cart1.svg";
 import Asider from "./Asider";

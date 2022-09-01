@@ -2,30 +2,55 @@
 
 .container {
 	width: 100vw;
-	margin-top: 5vw;
+	margin-top: 5px;
 }
 
 /* .container h1{
   font-size: 1em;
 } */
 
+.logo{
+	width: 100vw;
+	display: flex;
+	align-items: center;
+	align-content: center;
+	justify-content: center;
+	border-bottom:solid 5px #eda598
+	
+	
+}
+
+.logo img {
+	width: 93px;
+	height: 44px;
+	margin-left: 3vw;
+	margin-right: 3vw;
+	margin-top: 15px;
+	margin-bottom: 1vw;
+}
 
 .container h1,
 label {
-	color: #494949;
+	color: #4F4F4F;
 	font-family: 'Josefin Sans';
-	font-size: 1.5em;
+	
+}
+
+.mail{
+	font-size: 10px;
 }
 
 .inicio h1{
-	color: #494949;
+	color: #4F4F4F;
 	font-family: 'Josefin Sans';
+	font-size: 32px;
 }
 .register {
 	color: #494949;
 	font-family: 'Josefin Sans';
-	font-size: 1.5em;
+	font-size: 16px;
 	margin-bottom: 1em;
+	text-align: center;
 }
 
 .container button {
@@ -37,9 +62,36 @@ label {
 	font-size: 1.5em;
 	font-family: 'Josefin Sans';
 	cursor: pointer;
-	width: 70%;
-	margin-left: 15%;
+	width: 100%;
+	margin-left: 2%;
 	transition: all 0.3s ease-in-out;
+}
+
+
+.checkbox {
+	display: inline-block;
+	padding-right: 10px;
+	white-space: nowrap;
+
+
+}
+
+.recordar{
+	font-family: 'Josefin Sans';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 16px;
+	display: flex;
+	align-items: center;
+	color: #000000;
+}
+
+.container input {
+	width: 580px;
+	height: 56px;
+	top:31px;
+	radius:12px
 }
 
 .container button:hover {
