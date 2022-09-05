@@ -6,9 +6,8 @@ import { Link } from "react-router-dom";
 import { addToCart, removeFromCart } from "../actions/cartActions";
 import MessageBox from "../components/MessageBox";
 import styles from "../style/CartScreen.module.css";
-import ShippingAddressScreen from "./ShippingAddressScreen";
 
-export default function CartScreen(props) {
+export default function CartScreenOnly(props) {
   const productId = props.match.params.id;
   console.log("props de cart", props);
   const qty = props.location.search
@@ -28,13 +27,11 @@ export default function CartScreen(props) {
     dispatch(removeFromCart(id));
   };
 
-  //   const checkoutHandler = () => {
-  //     props.history.push("/signin?redirect=shipping");
-  //   };
+  const checkoutHandler = () => {
+    props.history.push("/signin?redirect=cart");
+  };
   return (
     <div className={styles.container}>
-      {cartItems.length > 0 ? <ShippingAddressScreen /> : ""}
-
       <h1 className={styles.h1}>Carrito de Compras</h1>
       <div className={styles.col1}>
         {error && <MessageBox variant="danger">{error}</MessageBox>}
@@ -98,7 +95,7 @@ export default function CartScreen(props) {
                 {cartItems.reduce((a, c) => a + c.price * c.qty, 0)}
               </h2>
             </li>
-            {/* <li>
+            <li>
               <button
                 type="button"
                 onClick={checkoutHandler}
@@ -107,7 +104,7 @@ export default function CartScreen(props) {
               >
                 Completa tu pedido
               </button>
-            </li> */}
+            </li>
           </ul>
         </div>
       </div>

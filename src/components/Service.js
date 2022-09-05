@@ -6,7 +6,7 @@ import { Link, useHistory } from "react-router-dom";
 import Rating from "./Rating";
 import styles from "../style/SearchScreen.module.css";
 import verMas from "../assent/verMas.png";
-import addCar from "../assent/addCart.png";
+import addCar from "../assent/addCart.svg";
 import carAdd from "../assent/carAdd.svg";
 import { addToCart } from "../actions/cartActions.js";
 
@@ -32,7 +32,7 @@ export default function Service(props) {
   const addToCartOrder = (_id) => {
     let qty = 1;
     dispatch(addToCart(_id, qty));
-    history.push("/signin?redirect=shipping");
+    history.push("/signin?redirect=cart");
   };
 
   useEffect(() => {

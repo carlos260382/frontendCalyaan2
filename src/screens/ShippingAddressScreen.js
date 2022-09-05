@@ -3,10 +3,12 @@
 // eslint-disable-next-line no-unused-vars
 import React, { useState, useEffect, useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { useHistory } from "react-router-dom";
 import { saveShippingAddress } from "../actions/cartActions";
 import { createOrder } from "../actions/orderActions.js";
 import { ORDER_CREATE_RESET } from "../constants/orderConstants.js";
 import styles from "../style/ShippingAddressScreen.module.css";
+// import CartScreen from "./CartScreen";
 // import Swal from "sweetalert2";
 import {
   LoadScript,
@@ -22,6 +24,8 @@ const libs = ["places"];
 const defaultLocation = { lat: 45.516, lng: -73.56 };
 
 export default function ShippingAddressScreen(props) {
+  const history = useHistory();
+  console.log("props de shipping", props);
   const cart = useSelector((state) => state.cart);
   const { shippingAddress } = cart;
   const userSignin = useSelector((state) => state.userSignin);
@@ -55,7 +59,7 @@ export default function ShippingAddressScreen(props) {
   const { success, order } = orderCreate;
   const dispatch = useDispatch();
   if (!userInfo) {
-    props.history.push("/signin");
+    history.push("/signin");
   }
   useEffect(() => {
     const fetch = async () => {
@@ -72,7 +76,7 @@ export default function ShippingAddressScreen(props) {
     setUserfatherId(userInfo.userfatherId);
     if (success) {
       alert("Ubicación seleccionada con exito");
-      props.history.push(`/orderTurn/${order._id}`);
+      history.push(`/orderTurn/${order._id}`);
       // props.history.push(`/turn`);
       dispatch({ type: ORDER_CREATE_RESET });
     }
@@ -83,7 +87,7 @@ export default function ShippingAddressScreen(props) {
     userInfo.pointsUser,
     userInfo.userfatherId,
     userInfo.name,
-    props.history,
+    history,
   ]);
 
   const onLoad = (map) => {
@@ -204,8 +208,6 @@ export default function ShippingAddressScreen(props) {
     );
     // props.history.push('/placeorder');
 
-    // props.history.push(`/orderTurn/${order._id}`);
-
     if (cart) dispatch(createOrder({ ...cart, orderItems: cart.cartItems }));
 
     dispatch({ type: ORDER_CREATE_RESET });
@@ -294,6 +296,7 @@ export default function ShippingAddressScreen(props) {
           </div>
         </form>
       </div>
+      {/* <CartScreen /> */}
     </div>
   ) : (
     <LoadingBox></LoadingBox>

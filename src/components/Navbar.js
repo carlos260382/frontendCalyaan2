@@ -236,7 +236,7 @@ function Navbar() {
             {userInfo ? (
               <div className={styles.container2}>
                 <div className={styles.carrito}>
-                  <NavLink to="/cart">
+                  <NavLink to="/cartOnly">
                     <img src={carrito} alt="description" />
 
                     {cartItems.length > 0 && (
