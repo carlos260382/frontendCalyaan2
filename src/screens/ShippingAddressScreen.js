@@ -234,7 +234,7 @@ export default function ShippingAddressScreen(props) {
               onLoad={onLoadPlaces}
               onPlacesChanged={onPlacesChanged}
             >
-              <div className="map-input-box">
+              <div className={styles.mapInput}>
                 <input
                   type="text"
                   placeholder="Ingrese su direccion completa"
@@ -249,11 +249,10 @@ export default function ShippingAddressScreen(props) {
         </LoadScript>
       </div>
       <div className={styles.sectionForm}>
-        <h1>
-          Tambien puede registrar su direccion en el formulario a continuacion
-        </h1>
-
         <form className="form" onSubmit={submitHandler}>
+          <div>
+            Tambien puede registrar su direccion en el formulario a continuacion
+          </div>
           <div>
             <label htmlFor="address">Dirección</label>
             <input
@@ -291,7 +290,7 @@ export default function ShippingAddressScreen(props) {
           <div>
             <label />
             <button className={styles.btn} type="submit">
-              Continuar
+              Confirmar
             </button>
           </div>
         </form>
