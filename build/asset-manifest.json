@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "http://localhost:3000/static/css/main.208b0113.css",
-    "main.js": "http://localhost:3000/static/js/main.f0c91e22.js",
+    "main.css": "http://localhost:3000/static/css/main.025c953d.css",
+    "main.js": "http://localhost:3000/static/js/main.c770fd31.js",
     "static/media/catMasaje.png": "http://localhost:3000/static/media/catMasaje.d7f68bd61b9973a67f7a.png",
     "static/media/catUñas.png": "http://localhost:3000/static/media/catUñas.3adb6051927d81b25903.png",
     "static/media/catDepilacion.png": "http://localhost:3000/static/media/catDepilacion.692c989dfc602c3ee191.png",
@@ -20,11 +20,11 @@
     "static/media/agenda.svg": "http://localhost:3000/static/media/agenda.d45734e9338e462d6f4e3eb2a8579d40.svg",
     "index.html": "http://localhost:3000/index.html",
     "static/media/addCart.svg": "http://localhost:3000/static/media/addCart.5fc2e97aacecf2636728a4ea9cb47ab1.svg",
-    "main.208b0113.css.map": "http://localhost:3000/static/css/main.208b0113.css.map",
-    "main.f0c91e22.js.map": "http://localhost:3000/static/js/main.f0c91e22.js.map"
+    "main.025c953d.css.map": "http://localhost:3000/static/css/main.025c953d.css.map",
+    "main.c770fd31.js.map": "http://localhost:3000/static/js/main.c770fd31.js.map"
   },
   "entrypoints": [
-    "static/css/main.208b0113.css",
-    "static/js/main.f0c91e22.js"
+    "static/css/main.025c953d.css",
+    "static/js/main.c770fd31.js"
   ]
 }
