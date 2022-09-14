@@ -14,7 +14,7 @@ import styles from "../style/ServiceScreen.module.css";
 export default function ServiceScreen(props) {
   const dispatch = useDispatch();
   const serviceId = props.match.params.id;
-  const [qty, setQty] = useState(1);
+  // const [qty, setQty] = useState(1);
   const serviceDetails = useSelector((state) => state.serviceDetails);
   const { loading, error, service } = serviceDetails;
   const userSignin = useSelector((state) => state.userSignin);
@@ -41,7 +41,7 @@ export default function ServiceScreen(props) {
   }, [dispatch, serviceId, successReviewCreate]);
   const addToCartHandler = () => {
     if (serviceId) {
-      dispatch(addToCart(serviceId, qty));
+      dispatch(addToCart(serviceId));
     }
 
     props.history.push("/signin?redirect=cart");
@@ -70,62 +70,37 @@ export default function ServiceScreen(props) {
           <div className={styles.container1}>
             <div className={styles.col1}>
               <img src={service.image} alt={service.name}></img>
-
-              <div className={styles.col3}>
-                <ul>
-                  <li>
-                    <div>
-                      <h2>Precio</h2>
-                      <div className="price">${service.price}</div>
-                    </div>
-                  </li>
-
-                  {service.countInStock > 0 && (
-                    <>
-                      <li>
-                        <div>
-                          <h2>Cantidad</h2>
-
-                          <select
-                            value={qty}
-                            onChange={(e) => setQty(e.target.value)}
-                          >
-                            {[...Array(service.countInStock).keys()].map(
-                              (x) => (
-                                <option key={x + 1} value={x + 1}>
-                                  {x + 1}
-                                </option>
-                              )
-                            )}
-                          </select>
-                        </div>
-                      </li>
-                      <li className={styles.btn}>
-                        <button onClick={addToCartHandler}>
-                          Completa tu pedido
-                        </button>
-                      </li>
-                    </>
-                  )}
-                </ul>
-              </div>
             </div>
             <div className={styles.col2}>
               <ul>
                 <li>
                   <h1>{service.name}</h1>
                 </li>
-                <li>
+                {/* <li>
                   <Rating
                     rating={service.rating}
                     numReviews={service.numReviews}
                   ></Rating>
-                </li>
+                </li> */}
                 <li>Precio : ${service.price}</li>
                 <li>
                   Descripción:
                   <p className={styles.p}>{service.description}</p>
                 </li>
+                <div>
+                  {/* <div className={styles.price}>
+                  <span>Precio</span>
+                  <div className={styles.price}>${service.price}</div>
+                </div> */}
+
+                  {service.countInStock > 0 && (
+                    <div className={styles.btn}>
+                      <button onClick={addToCartHandler}>
+                        Completa tu pedido
+                      </button>
+                    </div>
+                  )}
+                </div>
               </ul>
             </div>
           </div>
@@ -152,47 +127,50 @@ export default function ServiceScreen(props) {
           </div>
           <div className={styles.form1}>
             {userInfo ? (
-              <form onSubmit={submitHandler}>
-                <div>
-                  <h2>Escribe una reseña</h2>
-                </div>
-                <div className={styles.rating}>
-                  <label htmlFor="rating">Rating</label>
-                  <select
-                    id="rating"
-                    value={rating}
-                    onChange={(e) => setRating(e.target.value)}
-                  >
-                    <option value="">Selecciona</option>
-                    <option value="1">1- Bajo</option>
-                    <option value="2">2- Medio</option>
-                    <option value="3">3- Bueno</option>
-                    <option value="4">4- Muy Bueno</option>
-                    <option value="5">5- Excelente</option>
-                  </select>
-                </div>
-                <div className={styles.textarea}>
-                  <label>Comentario</label>
-                  <textarea
-                    value={comment}
-                    onChange={(e) => setComment(e.target.value)}
-                  ></textarea>
-                </div>
-                <div className={styles.ContenBtn}>
-                  <label />
-                  <button className={styles.btnForm} type="submit">
-                    Enviar
-                  </button>
-                </div>
-                <div>
-                  {loadingReviewCreate && <LoadingBox></LoadingBox>}
-                  {errorReviewCreate && (
-                    <MessageBox variant="danger">
-                      {errorReviewCreate}
-                    </MessageBox>
-                  )}
-                </div>
-              </form>
+              <>
+                <h2>Escribe una reseña</h2>
+                <form onSubmit={submitHandler}>
+                  <div className={styles.rating}>
+                    <div>
+                      <label htmlFor="rating">Rating</label>
+                      <select
+                        id="rating"
+                        value={rating}
+                        onChange={(e) => setRating(e.target.value)}
+                      >
+                        <option value="">Selecciona</option>
+                        <option value="1">1- Bajo</option>
+                        <option value="2">2- Medio</option>
+                        <option value="3">3- Bueno</option>
+                        <option value="4">4- Muy Bueno</option>
+                        <option value="5">5- Excelente</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div className={styles.textarea}>
+                    <label>Comentario</label>
+                    <textarea
+                      value={comment}
+                      onChange={(e) => setComment(e.target.value)}
+                    ></textarea>
+
+                    <div className={styles.ContenBtn}>
+                      <label />
+                      <button className={styles.btnForm} type="submit">
+                        Enviar
+                      </button>
+                    </div>
+                  </div>
+                  <div>
+                    {loadingReviewCreate && <LoadingBox></LoadingBox>}
+                    {errorReviewCreate && (
+                      <MessageBox variant="danger">
+                        {errorReviewCreate}
+                      </MessageBox>
+                    )}
+                  </div>
+                </form>
+              </>
             ) : (
               <MessageBox>
                 Por favor <Link to="/signin">Inicie sesión</Link> Para escribir
