@@ -91,6 +91,6 @@ self.addEventListener("push", (e) => {
 
   self.registration.showNotification(data.title, {
     body: data.message,
-    icon: "./assent/icon-72x72.png",
+    icon: "https://ibb.co/Y2tJyPh",
   });
 });
