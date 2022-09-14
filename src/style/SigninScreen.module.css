@@ -9,25 +9,6 @@
   font-size: 1em;
 } */
 
-.logo{
-	width: 100vw;
-	display: flex;
-	align-items: center;
-	align-content: center;
-	justify-content: center;
-	border-bottom:solid 5px #eda598
-	
-	
-}
-
-.logo img {
-	width: 93px;
-	height: 44px;
-	margin-left: 3vw;
-	margin-right: 3vw;
-	margin-top: 15px;
-	margin-bottom: 1vw;
-}
 
 .container h1,
 label {
@@ -88,8 +69,8 @@ label {
 }
 
 .container input {
-	width: 580px;
-	height: 56px;
+	width: 100vw;
+	height: auto;
 	top:31px;
 	border-radius:12px
 }

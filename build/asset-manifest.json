@@ -1,28 +1,30 @@
 {
   "files": {
-    "main.css": "http://localhost:3000/static/css/main.7f7936f8.css",
-    "main.js": "http://localhost:3000/static/js/main.e4126c98.js",
-    "static/media/catPeluqueria.png": "http://localhost:3000/static/media/catPeluqueria.1ac4483b8b6115ea5ba6.png",
+    "main.css": "http://localhost:3000/static/css/main.208b0113.css",
+    "main.js": "http://localhost:3000/static/js/main.f0c91e22.js",
     "static/media/catMasaje.png": "http://localhost:3000/static/media/catMasaje.d7f68bd61b9973a67f7a.png",
-    "static/media/catMaquillaje.png": "http://localhost:3000/static/media/catMaquillaje.31be06eccfccc243987e.png",
     "static/media/catUñas.png": "http://localhost:3000/static/media/catUñas.3adb6051927d81b25903.png",
     "static/media/catDepilacion.png": "http://localhost:3000/static/media/catDepilacion.692c989dfc602c3ee191.png",
     "static/media/logo.png": "http://localhost:3000/static/media/logo.7391fed19edfcfb85f3d.png",
+    "static/media/catPeluqueria.png": "http://localhost:3000/static/media/catPeluqueria.12047b1b3604795035fa.png",
+    "static/media/catMaquillaje.png": "http://localhost:3000/static/media/catMaquillaje.797bef9d0f486611feee.png",
     "service-worker.js": "http://localhost:3000/service-worker.js",
     "static/media/logo2.png": "http://localhost:3000/static/media/logo2.90f8e7a4a4c4d5fb765d.png",
     "static/media/catYoga.jpg": "http://localhost:3000/static/media/catYoga.f68a32677703b5a0a625.jpg",
     "static/media/catSpa.jpg": "http://localhost:3000/static/media/catSpa.ec9b74265a5d541f8be0.jpg",
     "static/media/cart3.svg": "http://localhost:3000/static/media/cart3.0ce7f9124b5528c6e70a8ec7ffe047a3.svg",
+    "static/media/carAdd.svg": "http://localhost:3000/static/media/carAdd.7aab0f979fdfb1b8368ba76b51d97553.svg",
+    "static/media/cart2.svg": "http://localhost:3000/static/media/cart2.4f0917621b1d945f670444e9f2a07a88.svg",
     "static/media/home.svg": "http://localhost:3000/static/media/home.1e790b93e157a6edebf54b60c47ae307.svg",
-    "static/media/cart2.svg": "http://localhost:3000/static/media/cart2.3cc464b9f97f56b1e23ebbfff2303d04.svg",
     "static/media/card.svg": "http://localhost:3000/static/media/card.e1986c4ecf4d42bb855e37332db34190.svg",
     "static/media/agenda.svg": "http://localhost:3000/static/media/agenda.d45734e9338e462d6f4e3eb2a8579d40.svg",
     "index.html": "http://localhost:3000/index.html",
-    "main.7f7936f8.css.map": "http://localhost:3000/static/css/main.7f7936f8.css.map",
-    "main.e4126c98.js.map": "http://localhost:3000/static/js/main.e4126c98.js.map"
+    "static/media/addCart.svg": "http://localhost:3000/static/media/addCart.5fc2e97aacecf2636728a4ea9cb47ab1.svg",
+    "main.208b0113.css.map": "http://localhost:3000/static/css/main.208b0113.css.map",
+    "main.f0c91e22.js.map": "http://localhost:3000/static/js/main.f0c91e22.js.map"
   },
   "entrypoints": [
-    "static/css/main.7f7936f8.css",
-    "static/js/main.e4126c98.js"
+    "static/css/main.208b0113.css",
+    "static/js/main.f0c91e22.js"
   ]
 }
