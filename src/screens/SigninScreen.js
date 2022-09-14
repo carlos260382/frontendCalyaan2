@@ -2,12 +2,11 @@
 // eslint-disable-next-line no-unused-vars
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Link, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { signin } from "../actions/userActions";
 import LoadingBox from "../components/LoadingBox";
 import MessageBox from "../components/MessageBox";
 import styles from "../style/SigninScreen.module.css";
-import logo from "../assent/logo.png";
 
 export default function SigninScreen(props) {
   const [email, setEmail] = useState("");
@@ -32,18 +31,14 @@ export default function SigninScreen(props) {
   }, [props.history, redirect, userInfo]);
   return (
     <div className={styles.container}>
-      <div className={styles.logo}>
-        <NavLink to="/">
-          <img src={logo} alt="imagen principal" />
-        </NavLink>
-      </div>
+      <div className={styles.logo}></div>
       <form className="form" onSubmit={submitHandler}>
         <div className={styles.inicio}>
           <h1>Iniciar sesión</h1>
         </div>
         {loading && <LoadingBox></LoadingBox>}
         {error && <MessageBox variant="danger">{error}</MessageBox>}
-        <div>
+        <div className={styles.mail}>
           <label htmlFor="email">Email</label>
           <input
             type="email"
@@ -65,10 +60,10 @@ export default function SigninScreen(props) {
           ></input>
         </div>
 
-        <label>
+        {/* <label>
           Recordar contraseña: <br />
           <input type="checkbox" name="checkbox" />
-        </label>
+        </label> */}
 
         <div>
           <label />

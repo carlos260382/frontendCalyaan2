@@ -41,7 +41,7 @@ export default function ServiceScreen(props) {
   }, [dispatch, serviceId, successReviewCreate]);
   const addToCartHandler = () => {
     if (serviceId) {
-      dispatch(addToCart(serviceId));
+      dispatch(addToCart(serviceId, 1));
     }
 
     props.history.push("/signin?redirect=cart");

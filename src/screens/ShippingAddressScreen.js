@@ -195,6 +195,7 @@ export default function ShippingAddressScreen(props) {
     cart.shippingAddress.country = country;
     cart.userPoints = userPoints;
     cart.userfatherId = userfatherId;
+    cart.shippingAddress.address = address;
 
     dispatch(
       saveShippingAddress({

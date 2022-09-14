@@ -91,7 +91,7 @@ label {
 	width: 580px;
 	height: 56px;
 	top:31px;
-	radius:12px
+	border-radius:12px
 }
 
 .container button:hover {
@@ -118,5 +118,10 @@ label {
 @media (max-width: 575.98px) {
 	.inicio h1{
 		font-size: 2em;
+	}
+
+	.mail input{
+	width: 70vw;
+	height: 5vw;
 	}
  }
