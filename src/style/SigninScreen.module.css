@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
 
 .container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 	width: 100vw;
 	margin-top: 5px;
 }
@@ -18,13 +22,18 @@ label {
 }
 
 .mail{
+	width: 40vw;
 	font-size: 10px;
+	
 }
+
+
 
 .inicio h1{
 	color: #4F4F4F;
 	font-family: 'Josefin Sans';
 	font-size: 32px;
+	text-align: center;
 }
 .register {
 	color: #494949;
@@ -43,37 +52,14 @@ label {
 	font-size: 1.5em;
 	font-family: 'Josefin Sans';
 	cursor: pointer;
-	width: 100%;
-	margin-left: 2%;
+	width: 20vw;
+	margin-left: 26%;
 	transition: all 0.3s ease-in-out;
 }
 
 
-.checkbox {
-	display: inline-block;
-	padding-right: 10px;
-	white-space: nowrap;
 
 
-}
-
-.recordar{
-	font-family: 'Josefin Sans';
-	font-style: normal;
-	font-weight: 400;
-	font-size: 16px;
-	line-height: 16px;
-	display: flex;
-	align-items: center;
-	color: #000000;
-}
-
-.container input {
-	width: 100vw;
-	height: auto;
-	top:31px;
-	border-radius:12px
-}
 
 .container button:hover {
 	background-color: #494949;
@@ -102,7 +88,13 @@ label {
 	}
 
 	.mail input{
-	width: 70vw;
+	width: 60vw;
 	height: 5vw;
+	}
+
+	.container button {
+		width: 50vw;
+		margin-left: 2%;
+
 	}
  }

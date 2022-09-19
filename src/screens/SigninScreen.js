@@ -66,11 +66,9 @@ export default function SigninScreen(props) {
         </label> */}
 
         <div>
-          <label />
           <button type="submit">Iniciar sesión</button>
         </div>
         <div>
-          <label />
           <div className={styles.register}>
             <div className={styles.register}>
               <Link to={`/recoverPassword`}>¿Olvidaste tu contraseña?</Link>
