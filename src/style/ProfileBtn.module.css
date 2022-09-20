@@ -1,0 +1,37 @@
+.Dropdown {
+    width: 3vw;
+    height: 3vw;
+    background-color: transparent !important;
+    border: none !important;
+}
+
+.Dropdown img{
+    width: 3vw;
+    height: 3vw;
+    background-color: transparent !important;
+    border: none !important;
+}
+
+.MenuDropdown{
+    background-color: #FFF6EA;
+}
+
+.MenuDropdown DropdownItem{
+background-color: aqua;
+}
+
+.MenuHeader{
+font-family: 'Josefin Sans';
+font-size: 1.5em;
+color: #494949    
+}
+
+.MenuItem{
+    background-color: aqua;
+   width: 10vw;
+}
+
+.MenuItem a{
+    font-family: 'Josefin Sans';
+font-size: 1.2em;
+color: #494949  }

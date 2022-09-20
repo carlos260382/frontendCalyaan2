@@ -10,6 +10,7 @@ import LoadingBox from "./LoadingBox";
 import MessageBox from "./MessageBox";
 import styles from "../style/Navbar.module.css";
 import logo from "../assent/logo.png";
+import ProfileBtn from "./ProfileBtn.js";
 
 import carrito from "../assent/cart2.svg";
 // import carritoBlanco from "../assent/cart1.svg";
@@ -269,6 +270,7 @@ function Navbar() {
             ""
           )}
         </div>
+
         {/* <div className={styles.contenSearch}>
           <div>
             <Route
@@ -278,6 +280,7 @@ function Navbar() {
             ></Route>
           </div>
         </div> */}
+        <ProfileBtn />
       </div>
     </div>
   );
