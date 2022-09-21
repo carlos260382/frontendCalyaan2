@@ -16,22 +16,57 @@
     background-color: #FFF6EA;
 }
 
-.MenuDropdown DropdownItem{
-background-color: aqua;
-}
 
 .MenuHeader{
+    margin: 1em;
 font-family: 'Josefin Sans';
 font-size: 1.5em;
 color: #494949    
 }
 
 .MenuItem{
-    background-color: aqua;
-   width: 10vw;
+   background-color: transparent;
+   width: 18vw;
+   border: none;
 }
+
+
 
 .MenuItem a{
     font-family: 'Josefin Sans';
-font-size: 1.2em;
-color: #494949  }
+font-size: 1em;
+color: #494949 ;
+font-weight: 400;
+
+
+}
+
+
+@media (max-width: 575.98px) {  
+
+    .Dropdown {
+        width: 9vw;
+        height: 9vw;
+margin-left: 1.7em;
+    }
+    .Dropdown img{
+        width: 5vw;
+        height: 5vw;
+
+    }
+
+
+    .MenuHeader{
+        margin: 1em;
+    font-size: 1.5em;
+   
+    }
+    
+    .MenuItem{
+       background-color: transparent;
+       width: 30vw;
+       border: none;
+    }
+
+
+}

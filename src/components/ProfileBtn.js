@@ -50,7 +50,7 @@ const ProfileBtn = (props) => {
           </DropdownItem>
           <DropdownItem className={styles.MenuItem}>
             <NavLink to="#signout" onClick={signoutHandler}>
-              Desconectar
+              Salir
             </NavLink>
           </DropdownItem>
           <DropdownItem divider />{" "}
@@ -77,7 +77,7 @@ const ProfileBtn = (props) => {
           </DropdownItem>
           <DropdownItem className={styles.MenuItem}>
             <NavLink to="#signout" onClick={signoutHandler}>
-              Desconectar
+              Salir
             </NavLink>
           </DropdownItem>
         </DropdownMenu>
@@ -109,7 +109,7 @@ const ProfileBtn = (props) => {
           </DropdownItem>
           <DropdownItem className={styles.MenuItem}>
             <NavLink to="#signout" onClick={signoutHandler}>
-              Desconectar
+              Salir
             </NavLink>
           </DropdownItem>
         </DropdownMenu>
