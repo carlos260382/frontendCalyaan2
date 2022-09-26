@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "http://localhost:3000/static/css/main.f2c35922.css",
-    "main.js": "http://localhost:3000/static/js/main.47a4f8ee.js",
+    "main.js": "http://localhost:3000/static/js/main.c79222ae.js",
     "static/media/catMasaje.png": "http://localhost:3000/static/media/catMasaje.d7f68bd61b9973a67f7a.png",
     "static/media/catUñas.png": "http://localhost:3000/static/media/catUñas.3adb6051927d81b25903.png",
     "static/media/catDepilacion.png": "http://localhost:3000/static/media/catDepilacion.692c989dfc602c3ee191.png",
@@ -14,18 +14,16 @@
     "static/media/catYoga.jpg": "http://localhost:3000/static/media/catYoga.f68a32677703b5a0a625.jpg",
     "static/media/catSpa.jpg": "http://localhost:3000/static/media/catSpa.ec9b74265a5d541f8be0.jpg",
     "static/media/cart3.svg": "http://localhost:3000/static/media/cart3.0ce7f9124b5528c6e70a8ec7ffe047a3.svg",
-    "static/media/carAdd.svg": "http://localhost:3000/static/media/carAdd.7aab0f979fdfb1b8368ba76b51d97553.svg",
     "static/media/cart2.svg": "http://localhost:3000/static/media/cart2.4f0917621b1d945f670444e9f2a07a88.svg",
     "static/media/home.svg": "http://localhost:3000/static/media/home.1e790b93e157a6edebf54b60c47ae307.svg",
     "static/media/card.svg": "http://localhost:3000/static/media/card.e1986c4ecf4d42bb855e37332db34190.svg",
     "static/media/agenda.svg": "http://localhost:3000/static/media/agenda.d45734e9338e462d6f4e3eb2a8579d40.svg",
     "index.html": "http://localhost:3000/index.html",
-    "static/media/addCart.svg": "http://localhost:3000/static/media/addCart.5fc2e97aacecf2636728a4ea9cb47ab1.svg",
     "main.f2c35922.css.map": "http://localhost:3000/static/css/main.f2c35922.css.map",
-    "main.47a4f8ee.js.map": "http://localhost:3000/static/js/main.47a4f8ee.js.map"
+    "main.c79222ae.js.map": "http://localhost:3000/static/js/main.c79222ae.js.map"
   },
   "entrypoints": [
     "static/css/main.f2c35922.css",
-    "static/js/main.47a4f8ee.js"
+    "static/js/main.c79222ae.js"
   ]
 }
