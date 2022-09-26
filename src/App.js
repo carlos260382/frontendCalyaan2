@@ -1,6 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 // eslint-disable-next-line no-unused-vars
-import React from "react";
+import React, { useEffect } from "react";
 import { useSelector } from "react-redux";
 import { BrowserRouter, Route } from "react-router-dom";
 import AdminRoute from "./components/AdminRoute";
@@ -45,12 +45,15 @@ function App(config) {
   const userSignin = useSelector((state) => state.userSignin);
   const { userInfo } = userSignin;
 
-  if (userInfo) {
-    serviceWorkerRegistration.register({
-      onUpdate: onServiceWorkerUpdate,
-      userInfo,
-    });
-  }
+  useEffect(() => {
+    if (userInfo) {
+      serviceWorkerRegistration.register({
+        onUpdate: onServiceWorkerUpdate,
+        userInfo,
+      });
+    }
+  }, []);
+
   // const dispatch = useDispatch();
 
   // const isLocalhost = Boolean(
