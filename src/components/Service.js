@@ -6,9 +6,10 @@ import { Link, useHistory } from "react-router-dom";
 import Rating from "./Rating";
 import styles from "../style/SearchScreen.module.css";
 import verMas from "../assent/verMas.png";
-import addCar from "../assent/addCart.svg";
-import carAdd from "../assent/carAdd.svg";
+import addCar from "../assent/addCart.png";
+import carAdd from "../assent/carAdd.png";
 import { addToCart } from "../actions/cartActions.js";
+// import * as Icon from "react-bootstrap-icons";
 
 export default function Service(props) {
   const [actived, setActived] = useState(false);
