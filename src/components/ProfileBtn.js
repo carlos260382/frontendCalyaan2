@@ -52,7 +52,7 @@ const ProfileBtn = (props) => {
               Historial de pedidos
             </DropdownItem>
           </NavLink>
-          <NavLink to="#signout" onClick={signoutHandler}>
+          <NavLink to="/signout" onClick={signoutHandler}>
             <DropdownItem className={styles.MenuItem}>Salir</DropdownItem>
           </NavLink>
           <DropdownItem divider />{" "}
@@ -81,7 +81,7 @@ const ProfileBtn = (props) => {
           <NavLink to="/orderlist/seller">
             <DropdownItem className={styles.MenuItem}>Pedidos</DropdownItem>
           </NavLink>
-          <NavLink to="#signout" onClick={signoutHandler}>
+          <NavLink to="/signout" onClick={signoutHandler}>
             <DropdownItem className={styles.MenuItem}>Salir</DropdownItem>
           </NavLink>
         </DropdownMenu>
@@ -113,7 +113,7 @@ const ProfileBtn = (props) => {
           <NavLink to="/support">
             <DropdownItem className={styles.MenuItem}>Soporte</DropdownItem>
           </NavLink>
-          <NavLink to="#signout" onClick={signoutHandler}>
+          <NavLink to="/signout" onClick={signoutHandler}>
             <DropdownItem className={styles.MenuItem}>Salir</DropdownItem>
           </NavLink>
         </DropdownMenu>
