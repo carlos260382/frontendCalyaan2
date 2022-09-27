@@ -45,7 +45,7 @@ export default function ProfileScreen() {
     }
 
     if (userInfo)
-      seturlReferred(`${process.env.PUBLIC_URL}/register/${userInfo._id} `);
+      seturlReferred(`${process.env.PUBLIC_URL}/#/register/${userInfo._id} `);
   }, [dispatch, userInfo._id, user, userInfo]);
   const submitHandler = (e) => {
     e.preventDefault();
