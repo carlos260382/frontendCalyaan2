@@ -9,6 +9,8 @@ import { listTurns } from "../actions/turnAction";
 import LoadingBox from "../components/LoadingBox";
 import MessageBox from "../components/MessageBox";
 import styles from "../style/OrderScreen.module.css";
+import { updateUserProfile, signoutHome } from "../actions/userActions.js";
+import { USER_UPDATE_PROFILE_RESET } from "../constants/userConstants.js";
 
 import {
   ORDER_DELIVER_RESET,
@@ -73,9 +75,9 @@ export default function OrderScreen(props) {
   // const turnUser = turns && turns.find(e => e.orderId === id);
   // console.log('este es turn Filter', turnUser);
 
-  const irMercadoPago = () => {
-    props.history.push(`/mercadoPago/${order._id}`);
-  };
+  // const irMercadoPago = () => {
+  //   props.history.push(`/mercadoPago/${order._id}`);
+  // };
 
   const redeemPoints = () => {
     const points = {
@@ -84,8 +86,12 @@ export default function OrderScreen(props) {
     };
     if (window.confirm("¿Desea redimir sus puntos?")) {
       dispatch(updateValue(id, points));
-      window.location.replace("");
-      // dispatch(signoutHome());
+      // dispatch(updateUserProfile());
+      window.location.reload(true);
+
+      //window.location.replace("");
+
+      dispatch(signoutHome());
     }
   };
 

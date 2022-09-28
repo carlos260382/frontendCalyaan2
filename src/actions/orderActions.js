@@ -29,6 +29,8 @@ import {
   ORDER_UPDATE_REQUEST,
 } from "../constants/orderConstants";
 
+import { USER_UPDATE_PROFILE_SUCCESS } from "../constants/userConstants";
+
 export const createOrder = (order) => async (dispatch, getState) => {
   dispatch({ type: ORDER_CREATE_REQUEST, payload: order });
   try {
@@ -234,6 +236,8 @@ export const updateValue = (orderId, points) => async (dispatch, getState) => {
     );
     console.log("data order update", data);
     dispatch({ type: ORDER_UPDATE_SUCCESS, payload: data });
+    dispatch({ type: USER_UPDATE_PROFILE_SUCCESS, payload: data });
+    localStorage.setItem("userInfo", JSON.stringify(data));
   } catch (error) {
     const message =
       error.response && error.response.data.message
