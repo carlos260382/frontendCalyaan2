@@ -147,7 +147,7 @@ function Navbar() {
         <div>
           {!userInfo ? (
             <div className={styles.containerBtn}>
-              <NavLink to="/register/01">
+              <NavLink to="/register/633476eff492380eb09432fc ">
                 <div className={styles.btnRegister}>Registrarme</div>
               </NavLink>
               <NavLink to="/signin">

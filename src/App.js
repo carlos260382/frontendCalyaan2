@@ -38,7 +38,6 @@ import ResetPasswordScreen from "./screens/ResetPasswordScreen.js";
 import CartScreenOnly from "./screens/CartScreenOnly.js";
 import Updater from "./components/Updater.js";
 import { onServiceWorkerUpdate } from "@3m1/service-worker-updater";
-// import { subscriptionUser } from "./actions/userActions.js";
 import * as serviceWorkerRegistration from "./serviceWorkerRegistration.js";
 
 function App(config) {
