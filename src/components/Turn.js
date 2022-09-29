@@ -16,6 +16,7 @@ export default function Turn(props) {
     id: turn._id,
     name: userInfo.name,
     img: userInfo.logo,
+    seller: userInfo._id,
   };
   const nameService = turn.service.map((servi) => {
     return servi.name;
@@ -31,7 +32,7 @@ export default function Turn(props) {
     if (window.confirm("¿Desea aceptar el turno?")) {
       dispatch(updateTurn(Turn));
     }
-    window.location.replace("");
+    // window.location.replace("");
   };
 
   const handleDelete = () => {
@@ -41,6 +42,7 @@ export default function Turn(props) {
     window.location.replace("");
   };
   console.log("usuario turn", userInfo);
+  console.log("turno", Turn);
   return (
     <table className="table">
       <thead>
