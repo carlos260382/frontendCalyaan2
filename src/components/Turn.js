@@ -41,8 +41,7 @@ export default function Turn(props) {
     }
     window.location.replace("");
   };
-  console.log("usuario turn", userInfo);
-  console.log("turno", Turn);
+
   return (
     <table className="table">
       <thead>

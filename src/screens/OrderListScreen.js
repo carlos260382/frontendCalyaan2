@@ -52,8 +52,6 @@ export default function OrderListScreen(props) {
     window.location.replace("");
   };
 
-  console.log("ordenes", orders);
-  console.log("usuario", userInfo);
   return (
     <div className={styles.container}>
       <h1>Pedidos</h1>
