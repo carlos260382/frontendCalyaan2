@@ -65,7 +65,6 @@ export default function OrderListScreen(props) {
         <table className="table">
           <thead>
             <tr>
-              <th>ID</th>
               <th>FECHA</th>
               <th>TOTAL</th>
               <th>PAGADO</th>
@@ -76,7 +75,6 @@ export default function OrderListScreen(props) {
           <tbody>
             {orders.map((order) => (
               <tr key={order._id}>
-                <td>{order._id}</td>
                 {/* <td>{order.user.name}</td> */}
                 <td>{order.createdAt.substring(0, 10)}</td>
                 <td>{order.totalPrice.toFixed(2)}</td>
