@@ -41,9 +41,7 @@ export default function OrderScreen(props) {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    if (loadingTurn) {
-      dispatch(listTurns());
-    }
+    dispatch(listTurns());
 
     if (!order || successPay || successDeliver || (order && order._id !== id)) {
       dispatch({ type: ORDER_PAY_RESET });
