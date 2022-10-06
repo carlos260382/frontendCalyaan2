@@ -8,7 +8,7 @@
 	width: 100vw;
 	height: auto;
 	margin-bottom: 3vw;
-	margin-top: 2em;
+	margin-top: 1em;
 }
 
 .referred{
@@ -89,7 +89,7 @@ label {
 
 @media (max-width: 575.98px) {
 	.container {
-		margin-top: 4em;
+		margin-top: 0em;
 	}
 	.referred{
 		display: flex;
@@ -97,6 +97,11 @@ label {
 		justify-content: center;
 		width: 100vw;
 		gap: 0em;
+	}
+
+	.referred p{
+		font-size: 1.3em;
+		font-weight: 400;
 	}
 	
 	.url{
@@ -107,7 +112,7 @@ label {
 		background-color: #FFF6EA;
 		color: #494949;
 		font-family: 'Josefin Sans';
-		font-size: 1em;
+		font-size: 1.4em;
 	}
 
 
