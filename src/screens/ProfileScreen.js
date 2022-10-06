@@ -87,7 +87,7 @@ export default function ProfileScreen() {
             {urlReferred}{" "}
             <input
               type="submit"
-              value="copiar URL"
+              value="Copiar Link"
               onClick={copyText}
               className={styles.btn}
             />

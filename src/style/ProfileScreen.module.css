@@ -35,6 +35,9 @@
 	padding: 13px 19px;
 	background-color: #ffffff;
 	border: none;
+	font-family: 'Josefin Sans';
+	color:#494949
+
 }
 
 .container h1,
@@ -96,4 +99,14 @@ label {
 		gap: 0em;
 	}
 	
+	.btn{
+		border-radius: 12px;
+		padding: 5px 5px;
+		font-size: 1.3em;
+	font-family: 'Josefin Sans';
+		background-color: #ffffff;
+		border: none;
+		color:#494949
+	}
+
 }
