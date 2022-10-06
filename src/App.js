@@ -233,6 +233,8 @@ function App(config) {
   return (
     <>
       <HashRouter>
+        <Updater />
+        <Navbar />
         <Route path="/register/:id" component={RegisterScreen}></Route>
         <Route
           path="/search/name/:name?"
@@ -256,8 +258,6 @@ function App(config) {
         ></Route>
         <Route path="/turnlist" component={TurnListScreen}></Route>
 
-        <Updater />
-        <Navbar />
         <main>
           <Route path="/" component={Landing} exact></Route>
           <Route path="/seller/:id" component={SellerScreen}></Route>
