@@ -61,12 +61,12 @@ export default function SearchScreen(props) {
     const sortOrder = filter.order || order;
     const filterMin = filter.min ? filter.min : filter.min === 0 ? 0 : min;
     const filterMax = filter.max ? filter.max : filter.max === 0 ? 0 : max;
-    return `/#/search/category/${filterCategory}/name/${filterName}/min/${filterMin}/max/${filterMax}/rating/${filterRating}/order/${sortOrder}/pageNumber/${filterPage}`;
+    return `/search/category/${filterCategory}/name/${filterName}/min/${filterMin}/max/${filterMax}/rating/${filterRating}/order/${sortOrder}/pageNumber/${filterPage}`;
   };
 
   const getAllUrl = (filter) => {
     const filterCategory = filter.category || category;
-    return `/#/search/category/${filterCategory}/name/all/min/0/max/0/rating/0/order/newest/pageNumber/1`;
+    return `/search/category/${filterCategory}/name/all/min/0/max/0/rating/0/order/newest/pageNumber/1`;
   };
 
   const getFilter = () => {

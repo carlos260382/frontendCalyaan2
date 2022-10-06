@@ -2,7 +2,7 @@
 // eslint-disable-next-line no-unused-vars
 import React, { useEffect } from "react";
 import { useSelector } from "react-redux";
-import { Route, HashRouter, BrowserRouter } from "react-router-dom";
+import { Route, HashRouter } from "react-router-dom";
 import AdminRoute from "./components/AdminRoute";
 import PrivateRoute from "./components/PrivateRoute";
 import CartScreen from "./screens/CartScreen";
@@ -255,9 +255,7 @@ function App(config) {
           exact
         ></Route>
         <Route path="/turnlist" component={TurnListScreen}></Route>
-      </HashRouter>
 
-      <BrowserRouter>
         <Updater />
         <Navbar />
         <main>
@@ -339,7 +337,7 @@ function App(config) {
           <Route path="/turn" component={TurnScreen} exact></Route>
         </main>
         <Footer />
-      </BrowserRouter>
+      </HashRouter>
     </>
   );
 }

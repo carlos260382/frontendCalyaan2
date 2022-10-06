@@ -83,7 +83,7 @@ export default function Landing() {
           newCategory?.map((c) => (
             <li key={c.name} className={styles.li}>
               <NavLink
-                to={`/#/search/category/${c.name}`}
+                to={`/search/category/${c.name}`}
                 className={styles.card}
               >
                 <img src={c.image} alt="" className={styles.img} />
@@ -91,7 +91,7 @@ export default function Landing() {
                   <h3>{c.name}</h3>
 
                   <button
-                    to={`/#/search/category/${c.name}`}
+                    to={`/search/category/${c.name}`}
                     className={styles.btn}
                   >
                     Ver mas
