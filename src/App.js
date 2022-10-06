@@ -241,7 +241,7 @@ function App(config) {
           <Route path="/seller/:id" component={SellerScreen}></Route>
           <Route path="/cart/:id?" component={CartScreen}></Route>
           <Route path="/cartOnly/:id?" component={CartScreenOnly}></Route>
-          <Route path="/register/:id" component={RegisterScreen}></Route>
+          <Route path="/#/register/:id" component={RegisterScreen}></Route>
           <Route path="/service/:id" component={ServiceScreen} exact></Route>
 
           <Route
