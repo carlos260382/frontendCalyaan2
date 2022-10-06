@@ -234,12 +234,32 @@ function App(config) {
     <>
       <HashRouter>
         <Route path="/register/:id" component={RegisterScreen}></Route>
+        <Route
+          path="/search/name/:name?"
+          component={SearchScreen}
+          exact
+        ></Route>
+        <Route
+          path="/search/category/:category"
+          component={SearchScreen}
+          exact
+        ></Route>
+        <Route
+          path="/search/category/:category/name/:name"
+          component={SearchScreen}
+          exact
+        ></Route>
+        <Route
+          path="/search/category/:category/name/:name/min/:min/max/:max/rating/:rating/order/:order/pageNumber/:pageNumber"
+          component={SearchScreen}
+          exact
+        ></Route>
+        <Route path="/turnlist" component={TurnListScreen}></Route>
       </HashRouter>
 
       <BrowserRouter>
         <Updater />
         <Navbar />
-
         <main>
           <Route path="/" component={Landing} exact></Route>
           <Route path="/seller/:id" component={SellerScreen}></Route>
@@ -268,30 +288,10 @@ function App(config) {
           <Route path="/placeorder" component={PlaceOrderScreen}></Route>
           <Route path="/order/:id" component={OrderScreen}></Route>
           <Route path="/orderTurn/:id" component={OrderScreenTurn}></Route>
-          <Route path="/turnlist" component={TurnListScreen}></Route>
+
           <Route path="/orderhistory" component={OrderHistoryScreen}></Route>
           <Route path="/mercadoPago/:id" component={MercadoPagoForm}></Route>
 
-          <Route
-            path="/search/name/:name?"
-            component={SearchScreen}
-            exact
-          ></Route>
-          <Route
-            path="/search/category/:category"
-            component={SearchScreen}
-            exact
-          ></Route>
-          <Route
-            path="/search/category/:category/name/:name"
-            component={SearchScreen}
-            exact
-          ></Route>
-          <Route
-            path="/search/category/:category/name/:name/min/:min/max/:max/rating/:rating/order/:order/pageNumber/:pageNumber"
-            component={SearchScreen}
-            exact
-          ></Route>
           <PrivateRoute
             path="/profile"
             component={ProfileScreen}
