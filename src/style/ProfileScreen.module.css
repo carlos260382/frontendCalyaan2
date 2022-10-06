@@ -99,10 +99,22 @@ label {
 		gap: 0em;
 	}
 	
+	.url{
+		
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		background-color: #FFF6EA;
+		color: #494949;
+		font-family: 'Josefin Sans';
+		font-size: 1em;
+	}
+
+
 	.btn{
 		border-radius: 12px;
-		padding: 5px 5px;
-		font-size: 1.3em;
+		padding: 8px 8px;
+		font-size: 1.5em;
 	font-family: 'Josefin Sans';
 		background-color: #ffffff;
 		border: none;
