@@ -31,14 +31,14 @@ export default function TurnCard(props) {
 
   const handleAcceptor = () => {
     if (window.confirm("¿Desea aceptar el turno?")) {
-      dispatch(updateTurn(Turn));
+      if (dispatch(updateTurn(Turn))) window.location.replace("");
     }
-    //window.location.replace("");
+    //
   };
 
   const handleDelete = () => {
     if (window.confirm("¿Desea eliminar el turno?")) {
-      dispatch(deleteTurn(Turn.id));
+      if (dispatch(deleteTurn(Turn.id))) window.location.replace("");
     }
     // window.location.replace("");
   };
