@@ -104,6 +104,7 @@ export default function OrderScreen(props) {
           <h3>Día y hora del Turno Seleccionado</h3>
           <p>Fecha: {turnUser ? turnUser.day : ""} </p>
           <p>Hora: {turnUser ? turnUser.hour : ""}</p>
+          <p>Direccion: {turnUser ? turnUser.address : ""}</p>
           <p>
             Codigo de confirmación: {turnUser ? turnUser.keyCode : ""} <br />{" "}
             (este numero sera mostrado por el profesional para confirmación)

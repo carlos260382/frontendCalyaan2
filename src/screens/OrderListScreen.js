@@ -51,7 +51,7 @@ export default function OrderListScreen(props) {
     }
     window.location.replace("");
   };
-
+  console.log("orders seller", orders);
   return (
     <div className={styles.container}>
       <h1>Pedidos</h1>
@@ -65,7 +65,7 @@ export default function OrderListScreen(props) {
         <table className="table">
           <thead>
             <tr>
-              <th>FECHA</th>
+              <th>FECHA PEDIDO</th>
               <th>TOTAL</th>
               <th>PAGADO</th>
               <th>REALIZADO</th>
@@ -77,7 +77,7 @@ export default function OrderListScreen(props) {
               <tr key={order._id}>
                 {/* <td>{order.user.name}</td> */}
                 <td>{order.createdAt.substring(0, 10)}</td>
-                <td>{order.totalPrice.toFixed(2)}</td>
+                <td>{order.itemsPrice.toFixed(2)}</td>
                 <td>{order.isPaid ? "Pagado" : "No"}</td>
                 <td>{order.isDelivered ? "Realizado" : "No"}</td>
                 <td>
