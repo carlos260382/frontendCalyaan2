@@ -79,7 +79,6 @@ export default function TurnScreen(props) {
       country: props.order.shippingAddress.country,
       service,
     });
-    console.log("este es el turno", turn);
   };
 
   const handleSubmit = async (e) => {
@@ -121,7 +120,6 @@ export default function TurnScreen(props) {
     }
   };
 
-  console.log("turno creado", turn);
   return (
     <form className={styles.form} onSubmit={handleSubmit}>
       <h1>Aquí podras gestionar tu turno</h1>

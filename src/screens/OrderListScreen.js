@@ -51,7 +51,7 @@ export default function OrderListScreen(props) {
     }
     window.location.replace("");
   };
-  console.log("orders seller", orders);
+
   return (
     <div className={styles.container}>
       <h1>Pedidos</h1>

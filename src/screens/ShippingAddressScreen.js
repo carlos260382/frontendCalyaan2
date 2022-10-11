@@ -25,7 +25,7 @@ const defaultLocation = { lat: 45.516, lng: -73.56 };
 
 export default function ShippingAddressScreen(props) {
   const history = useHistory();
-  console.log("props de shipping", props);
+
   const cart = useSelector((state) => state.cart);
   const { shippingAddress } = cart;
   const userSignin = useSelector((state) => state.userSignin);
@@ -113,7 +113,7 @@ export default function ShippingAddressScreen(props) {
 
   const onConfirm = async () => {
     const places = placeRef.current.getPlaces();
-    console.log("el place", places);
+
     if (places && places.length === 1) {
       // dispatch select action
       dispatch({
@@ -152,7 +152,7 @@ export default function ShippingAddressScreen(props) {
 
       if (cart) {
         dispatch(createOrder({ ...cart, orderItems: cart.cartItems }));
-        console.log("lo que va a la order", cart);
+
         dispatch({ type: ORDER_CREATE_RESET });
       }
     } else {
@@ -213,7 +213,7 @@ export default function ShippingAddressScreen(props) {
 
     dispatch({ type: ORDER_CREATE_RESET });
   };
-  console.log("usuario ID", typeof userfatherId);
+
   return googleApiKey ? (
     <div className={styles.container}>
       <div className={styles.map}>

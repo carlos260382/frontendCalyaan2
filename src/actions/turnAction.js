@@ -76,7 +76,7 @@ export const updateTurn = (Turn) => async (dispatch, getState) => {
         // body: { name: Turn.name, img: Turn.img, seller: Turn.seller },
       }
     );
-    console.log("data que regresa", data);
+
     dispatch({ type: TURN_UPDATE_SUCCESS, payload: data });
   } catch (error) {
     const message =

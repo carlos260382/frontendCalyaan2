@@ -13,7 +13,6 @@ export const useForm = (initialForm, validateForm) => {
   const dispatch = useDispatch();
 
   const handleChange = (e) => {
-    console.log("target", e.target);
     const { name, value } = e.target;
 
     setForm({
@@ -53,7 +52,7 @@ export const useForm = (initialForm, validateForm) => {
       return;
     }
   };
-  console.log("form ya setiado", form);
+
   return {
     form,
     errors,

@@ -7,7 +7,7 @@ import styles from "../style/ServiceListScreen.module.css";
 
 export default function TurnCard(props) {
   const { turn } = props;
-  console.log("turn", turn);
+
   const userSignin = useSelector((state) => state.userSignin);
   const { userInfo } = userSignin;
 

@@ -79,7 +79,7 @@ export default function RegisterScreen(props) {
 
   // console.log("ID de userFather", props);
   const { id } = props.match.params;
-  console.log("el id", id);
+
   // const [name, setName] = useState("");
   // const [email, setEmail] = useState("");
   // const [password, setPassword] = useState("");
@@ -111,7 +111,7 @@ export default function RegisterScreen(props) {
       props.history.push(redirect);
     }
   }, [props.history, redirect, userInfo, id]);
-  console.log("el initialForm", initialForm);
+
   return (
     <div className={styles.container}>
       <form onSubmit={handleSubmit}>

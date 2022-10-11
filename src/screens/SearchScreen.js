@@ -72,7 +72,7 @@ export default function SearchScreen(props) {
   const getFilter = () => {
     props.history.push(getFilterUrl(filter));
   };
-  console.log("rating", ratings);
+
   return (
     <div className={styles.container}>
       <div className={styles.containerSort}>
