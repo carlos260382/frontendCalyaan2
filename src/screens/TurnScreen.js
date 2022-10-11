@@ -108,7 +108,7 @@ export default function TurnScreen(props) {
 
         setTimeout(() => {
           history.push(`/order/${props.order._id}`);
-        }, 1000);
+        }, 2000);
       }
     } catch (error) {
       dispatch({

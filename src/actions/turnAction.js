@@ -122,6 +122,7 @@ export const getTurn = (id) => async (dispatch, getState) => {
       }
     );
     dispatch({ type: TURN_GET_SUCCESS, payload: data });
+    return data;
   } catch (error) {
     const message =
       error.response && error.response.data.message
