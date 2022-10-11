@@ -1,0 +1,66 @@
+import { useState } from "react";
+import { useDispatch } from "react-redux";
+import { register } from "../actions/userActions.js";
+import Swal from "sweetalert2";
+//import { helpHttp } from "../helpers/helpHttp";
+
+export const useForm = (initialForm, validateForm) => {
+  const [form, setForm] = useState(initialForm);
+  const [errors, setErrors] = useState({});
+  const [loading, setLoading] = useState(false);
+  //const [response, setResponse] = useState(null);
+
+  const dispatch = useDispatch();
+
+  const handleChange = (e) => {
+    console.log("target", e.target);
+    const { name, value } = e.target;
+
+    setForm({
+      ...form,
+      [name]: value,
+    });
+  };
+
+  const handleBlur = (e) => {
+    handleChange(e);
+    setErrors(validateForm(form));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setErrors(validateForm(form));
+
+    if (Object.keys(errors).length === 0) {
+      Swal.fire("Enviando Formulario");
+      setLoading(true);
+      dispatch(register(form));
+      //   // helpHttp()
+      //     .post("https://formsubmit.co/ajax/jonmircha@gmail.com", {
+      //       body: form,
+      //       headers: {
+      //         "Content-Type": "application/json",
+      //         Accept: "application/json",
+      //       },
+      //     })
+      // .then((res) => {
+      //   setLoading(false);
+      //   setResponse(true);
+      //   setForm(initialForm);
+      //   setTimeout(() => setResponse(false), 5000);
+      // });
+    } else {
+      return;
+    }
+  };
+  console.log("form ya setiado", form);
+  return {
+    form,
+    errors,
+    loading,
+    //response,
+    handleChange,
+    handleBlur,
+    handleSubmit,
+  };
+};
