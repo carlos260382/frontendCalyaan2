@@ -7,9 +7,7 @@ import LoadingBox from "../components/LoadingBox";
 import MessageBox from "../components/MessageBox";
 //import Swal from "sweetalert2";
 import styles from "../style/SigninScreen.module.css";
-
 import { useForm } from "../components/UseForm.js";
-import Loader from "./Loader";
 import Message from "./Message";
 
 const initialForm = {
@@ -222,7 +220,7 @@ export default function RegisterScreen(props) {
           </div>
         </div>
       </form>
-      {loading && <Loader />}
+      {loading && <LoadingBox />}
       {response && (
         <Message msg="Los datos han sido enviados" bgColor="#198754" />
       )}
