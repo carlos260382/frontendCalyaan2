@@ -88,7 +88,7 @@ export default function ProfileScreen() {
           </p>
 
           <span className={styles.url}>
-            {urlReferred}{" "}
+            {`${process.env.PUBLIC_URL}....${userInfo._id} `}{" "}
             <input
               type="submit"
               value="Copiar Link"

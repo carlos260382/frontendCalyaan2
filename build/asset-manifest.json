@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "http://localhost:3000/static/css/main.6d185615.css",
-    "main.js": "http://localhost:3000/static/js/main.6bd20d9e.js",
+    "main.js": "http://localhost:3000/static/js/main.761d2d1f.js",
     "static/media/catMasaje.png": "http://localhost:3000/static/media/catMasaje.d7f68bd61b9973a67f7a.png",
     "static/media/catUñas.png": "http://localhost:3000/static/media/catUñas.3adb6051927d81b25903.png",
     "static/media/catDepilacion.png": "http://localhost:3000/static/media/catDepilacion.692c989dfc602c3ee191.png",
@@ -20,10 +20,10 @@
     "static/media/agenda.svg": "http://localhost:3000/static/media/agenda.d45734e9338e462d6f4e3eb2a8579d40.svg",
     "index.html": "http://localhost:3000/index.html",
     "main.6d185615.css.map": "http://localhost:3000/static/css/main.6d185615.css.map",
-    "main.6bd20d9e.js.map": "http://localhost:3000/static/js/main.6bd20d9e.js.map"
+    "main.761d2d1f.js.map": "http://localhost:3000/static/js/main.761d2d1f.js.map"
   },
   "entrypoints": [
     "static/css/main.6d185615.css",
-    "static/js/main.6bd20d9e.js"
+    "static/js/main.761d2d1f.js"
   ]
 }
