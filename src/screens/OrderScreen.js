@@ -105,6 +105,7 @@ export default function OrderScreen(props) {
           <p>Fecha: {turnUser ? turnUser.day : ""} </p>
           <p>Hora: {turnUser ? turnUser.hour : ""}</p>
           <p>Direccion: {turnUser ? turnUser.address : ""}</p>
+          <p>Barrio/localidad: {turnUser ? turnUser.neighborhood : ""}</p>
           <p>
             Codigo de confirmación: {turnUser ? turnUser.keyCode : ""} <br />{" "}
             (este numero sera mostrado por el profesional para confirmación)

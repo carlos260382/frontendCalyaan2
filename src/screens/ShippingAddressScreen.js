@@ -72,6 +72,7 @@ export default function ShippingAddressScreen(props) {
     fetch();
     setFullName(userInfo.name);
     setCountry("Colombia");
+    setCity("Bogota");
     setUserPoints(userInfo.pointsUser);
     setUserfatherId(userInfo.userfatherId);
     if (success) {
@@ -193,6 +194,7 @@ export default function ShippingAddressScreen(props) {
     e.preventDefault();
     cart.shippingAddress.fullName = fullName;
     cart.shippingAddress.country = country;
+    cart.shippingAddress.city = city;
     cart.userPoints = userPoints;
     cart.userfatherId = userfatherId;
     cart.shippingAddress.address = address;
@@ -276,7 +278,7 @@ export default function ShippingAddressScreen(props) {
               required
             ></input>
           </div>
-          <div>
+          {/* <div>
             <label htmlFor="city">Ciudad</label>
             <input
               type="text"
@@ -286,7 +288,7 @@ export default function ShippingAddressScreen(props) {
               onChange={(e) => setCity(e.target.value)}
               required
             ></input>
-          </div>
+          </div> */}
 
           <div>
             <label />
