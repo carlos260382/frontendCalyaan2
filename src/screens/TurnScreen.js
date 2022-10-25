@@ -21,6 +21,7 @@ export default function TurnScreen(props) {
     return {
       name: service.name,
       price: service.price,
+      category: service.category,
       qty: service.qty,
     };
   });
@@ -120,7 +121,7 @@ export default function TurnScreen(props) {
       });
     }
   };
-
+  console.log("service", service);
   return (
     <form className={styles.form} onSubmit={handleSubmit}>
       <h1>Aquí podras gestionar tu turno</h1>
