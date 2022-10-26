@@ -135,7 +135,7 @@ export default function Footer() {
         <h3>Calyaan.com@gmail.com</h3>
       </div>
 
-      {userInfo && !userInfo.isAdmin && <ChatBox userInfo={userInfo} />}
+      {/* {userInfo && !userInfo.isAdmin && <ChatBox userInfo={userInfo} />} */}
     </div>
   );
 }
