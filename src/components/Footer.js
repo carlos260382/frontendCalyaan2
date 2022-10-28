@@ -1,6 +1,6 @@
-//import { useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
-//import ChatBox from "../components/ChatBox.js";
+import ChatBox from "../components/ChatBox.js";
 import styles from "../style/Footer.module.css";
 import pinteres from "../assent/pinteres.png";
 import youtube from "../assent/youtube.png";
@@ -9,8 +9,8 @@ import instagram from "../assent/instagram.png";
 import logo from "../assent/logo2.png";
 
 export default function Footer() {
-  // const userSignin = useSelector((state) => state.userSignin);
-  //const { userInfo } = userSignin;
+  const userSignin = useSelector((state) => state.userSignin);
+  const { userInfo } = userSignin;
   // const goWhatsApp = () => {
   // 	window.location.replace(
   // 		'https://api.whatsapp.com/send?phone=+573127411293&text=hola'
@@ -135,7 +135,7 @@ export default function Footer() {
         <h3>Calyaan.com@gmail.com</h3>
       </div>
 
-      {/* {userInfo && !userInfo.isAdmin && <ChatBox userInfo={userInfo} />} */}
+      {userInfo && !userInfo.isAdmin && <ChatBox userInfo={userInfo} />}
     </div>
   );
 }
