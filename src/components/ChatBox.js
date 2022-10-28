@@ -68,7 +68,7 @@ export default function ChatBox(props) {
     <div className="chatbox">
       <a
         className={styles.whastApp}
-        href="https://api.whatsapp.com/send?phone=+573127411293&text=¡hola quiero mas información!"
+        href="https://api.whatsapp.com/send?phone=+573147428757&text=¡hola quiero mas información!"
         target="_blank"
         rel="noopener noreferrer"
       >
