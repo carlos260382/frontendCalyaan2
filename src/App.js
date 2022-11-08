@@ -15,7 +15,6 @@ import ServiceListScreen from "./screens/ServiceListScreen";
 import ProfileScreen from "./screens/ProfileScreen";
 import RegisterScreen from "./screens/RegisterScreen";
 import ShippingAddressScreen from "./screens/ShippingAddressScreen";
-import ProfessionalReport from "./screens/ProfessionalReport";
 import SigninScreen from "./screens/SigninScreen";
 import ServiceScreen from "./screens/ServiceScreen";
 import ServiceEditScreen from "./screens/ServiceEditScreen";
@@ -287,7 +286,6 @@ function App(config) {
           <Route path="/placeorder" component={PlaceOrderScreen}></Route>
           <Route path="/order/:id" component={OrderScreen}></Route>
           <Route path="/orderTurn/:id" component={OrderScreenTurn}></Route>
-          <Route path="/professional" component={ProfessionalReport}></Route>
 
           <Route path="/orderhistory" component={OrderHistoryScreen}></Route>
           <Route path="/mercadoPago/:id" component={MercadoPagoForm}></Route>
